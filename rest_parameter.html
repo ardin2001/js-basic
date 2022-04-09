@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function rest(name,...array){
+        let total=0;
+        for(let i of array){
+            total+=i;
+        }
+        document.writeln(`<p>${name} have money ${total}</p>`);
+    }
+
+    rest("ardin",10,10,10,10);
+    rest("nugraha",20,20,20,20);
+
+    //spread syntax atau terlanjur punya data berupa array
+    rest("spread syntax",...[10,10,10,10]);
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>in operator bisa untuk mengecek apakah properti ada didalam sebuah objek atau tidak,tapi in operator juga bisa dipakai untuk mengecek indeks dalam array</p>
+    <p>in operator hanya untuk mengecek apakah properti ada atau tidak,tanpa mengecek nilai property</p>
+</body>
+<script>
+    let person = {
+        nama : 'ardin nugraha',
+        hp : 6285,
+        alamat : 'madurejo',
+        umur : 20
+    }
+    let cek = "nama" in person;
+    document.writeln(cek);
+    const mahasiswa = ['ardin','nugraha','sopo'];
+    cek = 2 in mahasiswa;
+    document.writeln(cek);
+</script>
+</html>

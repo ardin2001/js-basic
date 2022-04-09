@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const human = {
+        name : 'ardin',
+        mid : 'nugraha',
+        carrer : 'mobile dev'
+    }
+    function destructure({name,carrer}){
+        return `I am ${name} and I am a ${carrer}`
+    }
+    let arr = ['ardin',2012];
+    function destructure2([nim]){
+        return `I am ${name} and I am a ${nim}`
+    }
+
+    console.log(destructure(human));
+    console.log(destructure2(arr));
+</script>
+</html>

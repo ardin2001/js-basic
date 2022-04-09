@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>argument objek adalah fitur sebeluma danya rest parameter,namun fitur ini sudah jarang digunakan oleh programmer karena lebih disarankan menggunakan rest parameter</p>
+    <p>karena ketika mengunakan argumen objek kita tidak bisa mengisi parameter,karena tahunya cuma arguments aja</p>
+</body>
+<script>
+    function rest(){
+        let total=0;
+        for(let i of arguments){
+            total+=i;
+        }
+        document.writeln(`<p>${name} have money ${total}</p>`);
+    }
+    rest(1,2,3,4,5);
+</script>
+</html>

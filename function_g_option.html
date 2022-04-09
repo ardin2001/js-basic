@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>======aturan========</p>
+    <p>function generator itu sifatnya lazy,jika kita tidak mengambil data dari yield,amak yield selanjutnya tidak akan dieksekusi</p>
+    <p>kelebihannya adalah menghemat memory</p>
+</body>
+<script>
+    function* genap(angka){
+        for(let i=0; i<=angka; i++){
+            if (i%2 ==0) {
+                document.writeln(`<p>yiled ${i}</p>`);
+                yield i;
+            }
+        }
+    }
+    let tangkap = genap(10);
+    for(let i of tangkap){
+        document.writeln(`<p>${i}</p>`);
+    }
+
+    //berbeda dengan data for biasa yg biasa ditampung dalam i=[],jadi di iterasi dlu baru dipanggil iterasi arraynya
+</script>
+</html>

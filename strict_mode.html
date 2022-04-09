@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>saat kita menjalankan kode js tanpa mengaktifkan strict mode itu artinya js dalam keadaan sloppy mode</p>
+    <p>strict mode memiliki beberapa aturan ygg dapat dilihat lebih detail di internet,salah satu mengerrorkan js yg lama ECMSscript</p>
+</body>
+<script>
+    'use strict'
+    let nama = 'ardin ganteng';
+    let person = {
+        nama : 'nugraha',
+        umur : 20
+    }
+    with(person){
+        //disini kita tidak bisa mengakses scope global karena sudah dikecilkan ke scope skala local yaitu person
+        document.writeln(`<p>${nama}</p>`);
+        document.writeln(`<p>${umur}</p>`);
+    }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>function bisa dijadikan value,dan bisa dijadikan parameter</p>
+</body>
+<script>
+    function say(name){
+        document.writeln(`<p>hello ${name}</p>`);
+    }
+    say("ardin");
+    let function_say = say;
+    function_say("nugraha");
+
+    //function dikirim ke function lain
+    function give(callback){
+        callback('ardin ganteng callback');
+    }
+
+    give(function_say);
+</script>
+</html>

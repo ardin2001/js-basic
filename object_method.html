@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>karena function sebenarnya adalah salah satu tipe data,jadi function pun bisa dimasukkan kedalam property di object</p>
+</body>
+<script>
+    const person = {
+        nama : 'ardin nugraha',
+        umur : 20,
+        aksi : function (aksi){
+            document.writeln(`<p> ${person.nama} bisa ${aksi}</p>`);
+        }
+    };
+
+    person.aksi("bergelud");
+
+    //bisa juga bentuk variabel function
+    document.writeln(`<p> ======================================= </p>`);
+
+    function aksinya(aksi){
+            document.writeln(`<p> ${person2.nama} bisa ${aksi}</p>`);
+    };
+    const person2 = {
+        nama : 'ryo',
+        umur : 20,
+        aksi : aksinya
+    };
+
+    person2.aksi("makan");
+
+    //memasukkan method ke object,apabila objectnya sudah dibuat
+    document.writeln(`<p> ======================================= </p>`);
+    const person3 = {
+        nama : 'ryo object',
+        umur : 20
+    };
+
+    person3.aksi = function (aksi){
+            document.writeln(`<p> ${person3.nama} bisa ${aksi}</p>`);
+    };
+    person3.aksi("tidur");
+
+    person3.hallo = function (){
+            document.writeln(`<p> ${person3.nama} coba coba</p>`);
+    };
+    person3.hallo;
+</script>
+</html>

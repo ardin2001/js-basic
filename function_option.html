@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>beberapa aturan function</p>
+</body>
+<script>
+    //parameter function besifat optional untuk diisi
+    function say(name){
+            document.writeln(`<p>hello ${name}</p>`);
+    }
+
+    say();
+
+    //default parameter
+    function say2(name,age,gender='male'){
+            document.writeln(`<p>hello ${name} ${age} ${gender}</p>`);
+    }
+
+    say2("ardin",20);
+    say2("putri",20,'female');
+    say2();
+
+</script>
+</html>

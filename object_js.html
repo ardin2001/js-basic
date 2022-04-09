@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1. object literal
+    let mahasiswa = {
+        nama : 'ardin',
+        energi : 10,
+        makan : function (porsi){
+            this.energi+=porsi;
+            console.log(`Hallo ${this.nama},selamat makan`);
+        }
+    }
+    //minusnya adalah jika kita akan membuat banyak data,maka kita harus mengkopi ini secara banyak dan mengganti nama objectnya
+
+    //2.function declaration
+    function data_mahasiswa(nama,energi){
+        let mahasiswa = {};
+        mahasiswa.nama = nama,
+        mahasiswa.energi = energi
+        mahasiswa.makan = function (porsi){
+            // this.energi+=porsi;
+            this.energi*=2;
+            console.log(`Hallo ${this.nama},selamat makan`);
+        }
+        return mahasiswa
+    }
+    let ardin = data_mahasiswa('ardin nugraha',25);
+    let testi = data_mahasiswa('testi nugraha',25);
+
+    //3. function constructor
+    function data_mahasiswa2(nama,energi){
+        this.nama = nama,
+        this.energi = energi,
+        this.main = function (porsi){
+            this.energi-=porsi;
+            console.log(`Hallo ${this.nama},selamat makan`);
+        }
+    }
+    let nugraha = new data_mahasiswa2('nugraha',25);
+
+    // catatan,ternyata function property ini tetap dijalankan ketika kita memanggil functionnya constructor
+    //,jadi terlalu memakan memory ketika kita membuat banyak object
+
+    const aksi_mahasiswa = {
+        makan : function (porsi){
+            this.energi+=porsi;
+            console.log(`Hallo ${this.nama},selamat makan`);
+        },
+        main : function (porsi){
+            this.energi-=porsi;
+            console.log(`Hallo ${this.nama},selamat main game`);
+        },
+        tidur : function (porsi){
+            this.energi+=porsi*2;
+            console.log(`Hallo ${this.nama},selamat tidur`);
+        }
+    }
+    function data_mahasiswa3(nama,energi){
+        let mahasiswa = {};
+        mahasiswa.nama = nama,
+        mahasiswa.energi = energi,
+        mahasiswa.makan = aksi_mahasiswa.makan,
+        mahasiswa.main = aksi_mahasiswa.main
+
+        return mahasiswa;
+    }
+    let dodit = data_mahasiswa3('dodit nugraha',20);
+
+    //kelemahan membuat teknik ini yaitu kita mengelola 2data,yaitu antara function dan object atasnya,solusinya create obj
+
+    // 4.create object
+    function create_data(nama,energi){
+        let mahasiswa = Object.create(aksi_mahasiswa);
+        // Object.create(aksi_mahasiswa); maksutnya kita menyimpan parameter didalamnya,parameternya mengacu pada parentnya
+        //konsepnya sama seperti pewarisan pada oop
+        mahasiswa.nama = nama,
+        mahasiswa.energi = energi
+
+        return mahasiswa;
+    }
+    let jonny = create_data('jonny',20);
+
+</script>
+</html>

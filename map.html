@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>map digunakan untuk membuat data baru dari data sebelumnya</p>
+</body>
+<script>
+    data = [1,2,3,4,5,6,7,8,9,10];
+
+    const angka = data.map(i => i*2)
+    console.log(`map ${angka}`);
+    const angka2 = data.reduce((result,str) => `${result}${str}`);
+    console.log(angka2)
+</script>
+</html>

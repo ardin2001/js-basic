@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>=========aturan this======</p>
+    <p>1. kata kunci this mereprensentasikan kr objek milik siapa</p>
+    <p>2.tiap lokasi this berbeda2,tergantung lokasinya</p>
+    <p>3.di global scope dan function,this merupakan this referensi ke global objek</p>
+    <p>4.berbeda dengan this dalam obejct method,this dalam functionnya milik objeknya</p>
+    <p>===================================================================================</p>
+</body>
+<script>
+    console.info(this);
+    function hello(){
+        console.info(this);
+    }
+    hello();
+
+    //beda ketika this dalam objek
+    const person = {
+        //this=person
+        nama : 'ardin',
+        umur : 20,
+        hoby : 'tidur',
+        // simpulan : () =>{
+        //     document.writeln(`<p>${this.nama} berumur ${this.umur} dengan hoby ${this.hoby}</p>`);
+        // }
+        // this tetap window karena arrow function tidak mendukung kata kunci this dan super
+
+        simpulan : function (){
+            document.writeln(`<p>${this.nama} berumur ${this.umur} dengan hoby ${this.hoby}</p>`);
+
+        }
+    }
+    person.simpulan();
+</script>
+</html>

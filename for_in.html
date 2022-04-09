@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>fo in untuk data objek tapi bisa juga untuk array,tetapi lebih direkomendasikan menggunakan for of karena array sudah jelas memakai index</p>
+</body>
+<script>
+    let ardin = {
+        nama : 'ardin nugraha',
+        umur : 20,
+        jurusan : 'ti',
+        alamat : 'madurejo'
+    }
+    for(let i in ardin){
+        document.writeln(`<p>${ardin[i]}</p>`);
+        document.writeln(`<p>${ardin.i}</p>`)
+    }
+    document.writeln('===coba ke array===');
+    let nama=['ardin','nugraha','anjai'];
+    for(let i in nama){
+        document.writeln(`<p>${nama[i]}</p>`);
+        document.writeln(`<p>${i}</p>`)
+    }
+
+</script>
+</html>

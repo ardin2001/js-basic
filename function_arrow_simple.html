@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>=====arrow function tanpa block=======</p>
+</body>
+<script>
+    const say = nama => document.writeln(`hallo ${nama}`);
+    say("ardin");
+
+    document.writeln(`<p>============================</p>`);
+    //jika tidak menggunakan block maka tidak perlu menggunakan return pada arrow function
+    const sum = (a,b) => a+b;
+    let sum2 = sum(2,4);
+    document.writeln(sum2);
+</script>
+</html>

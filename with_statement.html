@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>with sudah tidak digunakan lagi karena dapat menyebabkan ambigu karena sudah memperkecil scope</p>
+</body>
+<script>
+    let nama = 'ardin ganteng';
+    let person = {
+        nama : 'nugraha',
+        umur : 20
+    }
+    with(person){
+        //disini kita tidak bisa mengakses scope global karena sudah dikecilkan ke scope skala local yaitu person
+        document.writeln(`<p>${nama}</p>`);
+        document.writeln(`<p>${umur}</p>`);
+    }
+</script>
+</html>

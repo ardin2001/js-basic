@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* nama(){
+            yield "ardin";
+            yield "nugraha";
+            yield "ganteng";
+        }
+        let item = nama();
+        for(let i of item){
+            document.writeln(`<p>hello ${i}</p>`);
+        }
+        //undifined dikarenakan data function generator itu sifatnya iterable yg bisa diakses menggunakan loop,tapi tidak mempunyai indeks
+        document.writeln(item[0]);
+    </script>
+    
+</body>
+</html>

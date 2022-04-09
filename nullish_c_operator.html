@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>nullish coalescing operator digunakan untuk mengecek apakah suatu nilai null dan undifinied atau tidak</p>
+</body>
+<script>
+    // ketika mengecek tanpa fitur nullish
+    let angka;
+
+    if (angka == null && angka ==  undefined){
+        document.writeln('nullish');
+    }else{
+        document.writeln('tidak nullish');
+    }
+    document.writeln(`<p>=======ketika menggunakan fitur nullish======</p>`)
+
+    let cek = angka ?? 'variabel ini adalah nullish';
+    document.writeln(cek);
+</script>
+</html>

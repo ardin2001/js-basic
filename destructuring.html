@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>destruturing memudahkan kita dalam membongkar data dalam array/objek tanpa mengambil satu-satu</p>
+</body>
+<script>
+    let data = ['ardin','nugraha','kurniawan','putra','sasongko','alom'];
+    let [st,nd,rd,th,...others] = data;
+    console.info(st);
+    console.info(nd);
+    console.info(rd);
+    console.info(th);
+    console.info(others);
+    
+    //misal pada data objek
+    let person = {
+        nama : 'ardin',
+        umur :20,
+        hobi : 'memancing',
+        alamat : {
+            desa : 'madurejo',
+            kecamatan : 'pasirian',
+            kabupaten : 'lumajang'
+        }
+    }
+    //nama variabel harus sama dengan nama property objek
+    //jika dalam value property ada nested object maka ada caranya
+    let {nama,umur,hobi,alamat:{desa,kecamatan,kabupaten}} = person;
+    console.info(nama);
+    console.info(umur);
+    console.info(hobi);
+    // console.info(alamat);
+
+    console.info(desa);
+    console.info(kecamatan);
+
+    //destructuring pada parameter
+    document.writeln(`<p>destructuring pada parameter</p>`);
+    let person2 = {
+        nama : 'ardin',
+        nim : 2012,
+        jurusan : 'ti'
+    }
+    function say({nama,nim,jurusan}){
+        document.writeln(`<p>${nama}</p>`);
+        document.writeln(`<p>${nim}</p>`);
+        document.writeln(`<p>${jurusan}</p>`);
+    }
+    say(person2);
+
+    //destructuring pada array
+    document.writeln(`<p>destructuring pada array</p>`);
+
+    function say2([st,nd,rd]){
+        let sum = st+nd+rd;
+        document.writeln(`<p>${sum}</p>`);
+        document.writeln(`<p>${st}</p>`);
+        document.writeln(`<p>${rd}</p>`);
+    }
+    say2([10,20,30]);
+
+    //default value destructuring
+    document.writeln(`<p>default value destructuring</p>`);
+    let data3 = ['ardin','nugraha','anjai','binjai'];
+    let [st1,nd2,rd3,...more] = data3;
+    document.writeln(`<p>${st1}</p>`);
+    document.writeln(`<p>${nd2}</p>`);
+    document.writeln(`<p>${rd3}</p>`);
+    document.writeln(`<p>${more}</p>`);
+    //jika data pada array tidak ada maka akan mengambil data default valuenya,berlaku juga pada objek
+
+</script>
+</html>

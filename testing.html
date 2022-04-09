@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // const data = {
+    //     nama : 'ardin',
+    //     nim : 2012,
+    //     get aksi(){
+    //         console.log(this);
+    //         document.writeln(`hello ${this.nama} ${this.nim}`);
+    //     }
+    // }
+    // data.aksi;
+    const data = {
+        nama : 'ardin',
+        nim : 20212,
+        say : ()=>{
+            document.writeln(this.nama);
+            console.log(this);
+        }
+    }
+    data.say()
+</script>
+</html>
